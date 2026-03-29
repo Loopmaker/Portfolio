@@ -9,7 +9,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-slate-900 rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col lg:row-reverse lg:flex-row transition-colors duration-300"
+          className="bg-white dark:bg-slate-900 rounded-[3.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row-reverse transition-colors duration-300"
         >
           <div className="lg:w-1/2 p-12 md:p-20 bg-bg-dark text-white space-y-10 relative overflow-hidden">
             <div className="relative z-10">
@@ -27,7 +27,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Email me</p>
-                    <p className="text-xl font-bold font-headline">hello@designer.dev</p>
+                    <p className="text-xl font-bold font-headline">johnalvin2121@gmail.com</p>
                   </div>
                 </div>
                 
@@ -37,7 +37,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-[10px] font-bold text-white/40 uppercase tracking-widest mb-1">Based in</p>
-                    <p className="text-xl font-bold font-headline">San Francisco, CA</p>
+                    <p className="text-xl font-bold font-headline">Pasig City, Caniogan</p>
                   </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@ const Contact = () => {
                   <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">First Name</label>
                   <input 
                     type="text" 
-                    placeholder="John"
+                    placeholder="Your FIRST NAME"
                     className="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 border-0 rounded-2xl focus:ring-2 focus:ring-primary/30 transition-all outline-none dark:text-white"
                   />
                 </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                   <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Last Name</label>
                   <input 
                     type="text" 
-                    placeholder="Doe"
+                    placeholder="Your LAST NAME"
                     className="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 border-0 rounded-2xl focus:ring-2 focus:ring-primary/30 transition-all outline-none dark:text-white"
                   />
                 </div>
@@ -72,7 +72,7 @@ const Contact = () => {
                 <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Email Address</label>
                 <input 
                   type="email" 
-                  placeholder="john@example.com"
+                  placeholder="Your EMAIL ADDRESS"
                   className="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 border-0 rounded-2xl focus:ring-2 focus:ring-primary/30 transition-all outline-none dark:text-white"
                 />
               </div>
@@ -80,7 +80,7 @@ const Contact = () => {
               <div className="space-y-3">
                 <label className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Your Message</label>
                 <textarea 
-                  placeholder="Tell me about your project..." 
+                  placeholder="Your MESSAGE" 
                   rows={4}
                   className="w-full px-6 py-4 bg-slate-50 dark:bg-slate-800 border-0 rounded-2xl focus:ring-2 focus:ring-primary/30 transition-all outline-none resize-none dark:text-white"
                 ></textarea>

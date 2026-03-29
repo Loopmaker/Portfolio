@@ -27,7 +27,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-24 px-6 md:px-12 bg-white dark:bg-bg-dark transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div className="max-w-xl">
             <p className="text-primary font-bold tracking-widest uppercase text-xs mb-4 font-headline">
               Selected Works
@@ -41,7 +41,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
           {projects.map((project, idx) => (
             <motion.div
               key={project.id}
@@ -49,7 +49,7 @@ const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2 }}
-              className="group bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500 min-w-0"
+              className="group bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img 
@@ -88,8 +88,8 @@ const Projects = () => {
                   </div>
                 </div>
                 
-                <h3 className="text-2xl font-headline font-extrabold text-slate-900 dark:text-white break-words">{project.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm break-words">
+                <h3 className="text-2xl font-headline font-extrabold text-slate-900 dark:text-white">{project.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
                   {project.desc}
                 </p>
                 
@@ -106,6 +106,7 @@ const Projects = () => {
           ))}
         </div>
 
+        {/* Currently Curating Section */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -123,11 +124,11 @@ const Projects = () => {
               I'm currently deep-diving into <span className="text-primary font-bold uppercase tracking-tight">Generative Design</span> and <span className="text-tertiary font-bold uppercase tracking-tight">Web3 UX</span>. I believe the next frontier of digital curation lies in personalized, AI-driven experiences.
             </p>
             <div className="flex flex-wrap gap-4">
-              <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 min-w-[120px] md:min-w-[140px]">
+              <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 min-w-[140px]">
                 <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Learning</p>
                 <p className="font-bold font-headline text-sm dark:text-white">Three.js / WebGL</p>
               </div>
-              <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 min-w-[120px] md:min-w-[140px]">
+              <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 min-w-[140px]">
                 <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Learning</p>
                 <p className="font-bold font-headline text-sm dark:text-white">Next.js 14</p>
               </div>
