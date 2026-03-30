@@ -6,21 +6,21 @@ const Projects = () => {
   const projects = [
     {
       id: '01',
-      title: 'Eco-Stream Retail',
-      desc: 'Redesigning the e-commerce experience for sustainable luxury. This project involved deep user research to create a transparent shopping flow that emphasizes emotional storytelling and eco-conscious decision making.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCoe8H2VfVa7vZKlo0ePZEFsk_7A42r_wiYkGsm3vA4vw4fKh_kbMVSJ8p0q3_Yq74ygTY4ExGGGXc0DTZYRyZJDZVQ1TYhOeqFBtz4Lye3yjcsvdHAo4RyGpMmX-7brBUyvWjq4Hz1ZUibcxt4qk4Uk9BY_s-RvvyJxkXB5wN-EEKq5MkcLqudOJtUKWhDtbLsm0MEH_9DShTJUNeceWUcbmxrqVgax6XxQmTQQE6f37U7u3b5D8Pn7s3TY_YunwXJxlBxQm62UPnJ',
-      tags: ['UX Research', 'Figma'],
-      link: '#',
-      source: '#'
+      title: 'Expense Tracker',
+      desc: 'A clean and simple expense tracker web app. Users can enter transactions, see their current balance, income, and expenses, and view a list of recent transactions helping them easily track their spending and money flow in one place.',
+      image: 'expense-tracker.png',
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      link: 'https://loopmaker.github.io/Expense-Tracker/',
+      source: 'https://github.com/Loopmaker/Expense-Tracker'
     },
     {
       id: '02',
-      title: 'FinPulse Dashboard',
-      desc: 'A real-time financial tracking application. It fetches live market data and visualizes complex investment portfolios with clean, interactive charts and a glassmorphic interface for modern investors.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAZyWGJ8lm185DS8HNDkoS47a3WYndAqZELE0xiNp8La3RKJbEJoaEMvWZi6135qIH_5HVnAkyHInfbTe4Pzag6CpdsDSvbpQe99nJtjdP9W4rvpaGTd8mFNOjjDVrbXogw3EbYxCbgMS0Q2idrjwtvu5QT_luc_52RcLe3kzcjPDOtgsJBI2Znkr-afM0y6Bseng_BiNM-egCSmxs7Z-bKHpd6ww43u_XeOeTM81b1EM0tM8SM0ZpQfRluKeFQEZLHcDR4I0m0Hr6U',
-      tags: ['React', 'API'],
-      link: '#',
-      source: '#'
+      title: 'Pokédex',
+      desc: 'A Pokédex web application. It fetches real Pokémon data from an external API and displays details like name, image, and type for each Pokémon. Users can scroll through and explore Pokémon information in a responsive and engaging interface.',
+      image: 'pokedex.png',
+      tags: ['React', 'JavaScript', 'PokeAPI'],
+      link: 'https://pokedex-rose-psi.vercel.app/',
+      source: 'https://github.com/Loopmaker/Pokedex'
     }
   ];
 
@@ -33,12 +33,9 @@ const Projects = () => {
               Selected Works
             </p>
             <h2 className="text-4xl md:text-6xl font-headline font-bold tracking-tight dark:text-white">
-              Gallery of Exhibits.
+              Featured Work
             </h2>
           </div>
-          <p className="text-slate-500 dark:text-slate-400 max-w-xs md:text-right leading-relaxed">
-            A curated selection of projects focusing on visual harmony and technical precision.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -51,7 +48,7 @@ const Projects = () => {
               transition={{ delay: idx * 0.2 }}
               className="group bg-slate-50 dark:bg-slate-800/50 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 hover:shadow-2xl transition-all duration-500"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative md:aspect-[4/3] overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -60,14 +57,18 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 flex items-center justify-center gap-4">
                   <a 
-                    href={project.link} 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer" 
                     className="flex items-center gap-2 px-6 py-3 border-2 border-white text-white rounded-xl font-bold hover:bg-primary hover:border-primary transition-all active:scale-95"
                   >
                     <ExternalLink size={18} />
                     Live
                   </a>
                   <a 
-                    href={project.source} 
+                    href={project.source}
+                    target="_blank"
+                    rel="noopener noreferrer"  
                     className="flex items-center gap-2 px-6 py-3 border-2 border-white text-white rounded-xl font-bold hover:bg-primary hover:border-primary transition-all active:scale-95"
                   >
                     <Code size={18} />
@@ -94,10 +95,10 @@ const Projects = () => {
                 </p>
                 
                 <div className="flex gap-6 pt-4 border-t border-slate-200 dark:border-slate-700">
-                  <a href={project.link} className="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                  <a href={project.link} className="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all" target="_blank" rel="noopener noreferrer">
                     Live demo <ArrowRight size={16} />
                   </a>
-                  <a href={project.source} className="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all">
+                  <a href={project.source} className="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all" target="_blank" rel="noopener noreferrer">
                     Source <ArrowRight size={16} />
                   </a>
                 </div>
@@ -118,19 +119,19 @@ const Projects = () => {
               <div className="p-2 bg-primary/10 rounded-lg text-primary">
                 <Sparkles size={24} />
               </div>
-              <h3 className="text-2xl font-headline font-bold dark:text-white">Currently Curating</h3>
+              <h3 className="text-2xl font-headline font-bold dark:text-white">Currently Exploring</h3>
             </div>
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-              I'm currently deep-diving into <span className="text-primary font-bold uppercase tracking-tight">Generative Design</span> and <span className="text-tertiary font-bold uppercase tracking-tight">Web3 UX</span>. I believe the next frontier of digital curation lies in personalized, AI-driven experiences.
+              I’m currently focusing on <span className="text-primary font-bold uppercase tracking-tight">TypeScript</span> and <span className="text-tertiary font-bold uppercase tracking-tight">Tailwind CSS</span> to build scalable, well-structured, and responsive user interfaces.
             </p>
             <div className="flex flex-wrap gap-4">
               <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 min-w-[140px]">
                 <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Learning</p>
-                <p className="font-bold font-headline text-sm dark:text-white">Three.js / WebGL</p>
+                <p className="font-bold font-headline text-sm dark:text-white">TypeScript</p>
               </div>
               <div className="bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200/50 dark:border-slate-700/50 min-w-[140px]">
                 <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-1">Learning</p>
-                <p className="font-bold font-headline text-sm dark:text-white">Next.js 14</p>
+                <p className="font-bold font-headline text-sm dark:text-white">Tailwind CSS</p>
               </div>
             </div>
           </div>
